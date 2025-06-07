@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Beautiful Girl 💕</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            background: linear-gradient(45deg, #ff9a9e, #fecfef, #fecfef, #ff9a9e);
+            background-size: 400% 400%;
+            animation: gradientShift 8s ease infinite;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .container {
+            display: flex;
+            min-height: 100vh;
+            align-items: center;
+            padding: 2rem;
+            gap: 3rem;
+        }
+
+        .left-section {
+            flex: 1;
+            padding: 2rem;
+            z-index: 10;
+        }
+
+        .right-section {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 10;
+        }
+
+        .love-message {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 3rem;
+            border-radius: 30px;
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(15px);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .greeting {
+            font-size: 3rem;
+            color: #ff6b9d;
+            margin-bottom: 1rem;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .main-message {
+            font-size: 1.8rem;
+            color: #333;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+            font-style: italic;
+        }
+
+        .vote-display {
+            background: linear-gradient(135deg, #ff6b9d, #ff8fab);
+            color: white;
+            padding: 2rem;
+            border-radius: 20px;
+            text-align: center;
+            margin-bottom: 2rem;
+            box-shadow: 0 15px 30px rgba(255, 107, 157, 0.3);
+        }
+
+        .vote-number {
+            font-size: 4rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .vote-text {
+            font-size: 1.3rem;
+            opacity: 0.9;
+        }
+
+        .love-quotes {
+            font-size: 1.2rem;
+            color: #666;
+            line-height: 1.8;
+            font-style: italic;
+        }
+
+        .photo-container {
+            width: 400px;
+            height: 500px;
+            background: linear-gradient(135deg, #ff9a9e, #fecfef);
+            border-radius: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.2);
+            border: 5px solid rgba(255, 255, 255, 0.5);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .photo-placeholder {
+            font-size: 1.5rem;
+            color: rgba(255, 255, 255, 0.8);
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .photo-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 25px;
+        }
+
+        .floating-element {
+            position: absolute;
+            font-size: 2rem;
+            animation: floatAround 8s ease-in-out infinite;
+            pointer-events: none;
+        }
+
+        @keyframes floatAround {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            25% { transform: translateY(-20px) rotate(90deg); }
+            50% { transform: translateY(-10px) rotate(180deg); }
+            75% { transform: translateY(-30px) rotate(270deg); }
+        }
+
+        .heart-rain {
+            position: absolute;
+            top: -50px;
+            font-size: 1.5rem;
+            animation: heartRain 4s linear infinite;
+            pointer-events: none;
+        }
+
+        @keyframes heartRain {
+            0% {
+                transform: translateY(-50px) rotate(0deg);
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+            }
+            90% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(100vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        .refresh-btn {
+            background: linear-gradient(135deg, #ff6b9d, #ff8fab);
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 25px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            box-shadow: 0 10px 20px rgba(255, 107, 157, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .refresh-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 30px rgba(255, 107, 157, 0.4);
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                padding: 1rem;
+            }
+            
+            .photo-container {
+                width: 300px;
+                height: 400px;
+            }
+            
+            .greeting {
+                font-size: 2rem;
+            }
+            
+            .main-message {
+                font-size: 1.3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="left-section">
+            <div class="love-message">
+                <h1 class="greeting">Hey Beautiful! 💕</h1>
+                <p class="main-message">
+                    You light up my world every single day, and apparently, you light up everyone else's too! ✨
+                </p>
+                
+                <div class="vote-display">
+                    <div class="vote-number" id="voteCount">{{ total_votes }}</div>
+                    <div class="vote-text">people want to see you happy! 🌟</div>
+                </div>
+                
+                <div class="love-quotes">
+                    "In a world full of temporary things, you are a perpetual feeling of happiness." 💖<br><br>
+                    Every vote represents someone who believes in your beautiful soul! 🌸
+                </div>
+                
+                <br>
+                <button class="refresh-btn" onclick="updateVoteCount()">
+                    Refresh Count 💕
+                </button>
+            </div>
+        </div>
+        
+        <div class="right-section">
+            <div class="photo-container">
+                
+                <!-- Uncomment and add photo path when ready -->
+                <img src="/static/images/IMG-20250511-WA0004.jpg" alt="My Beautiful Girl">
+            </div>
+        </div>
+    </div>
+
+    <!-- Floating elements -->
+    <div class="floating-element" style="top: 10%; left: 5%; animation-delay: 0s;">💖</div>
+    <div class="floating-element" style="top: 20%; right: 10%; animation-delay: 1s;">🌹</div>
+    <div class="floating-element" style="bottom: 30%; left: 8%; animation-delay: 2s;">💕</div>
+    <div class="floating-element" style="bottom: 10%; right: 15%; animation-delay: 3s;">✨</div>
+    <div class="floating-element" style="top: 50%; left: 3%; animation-delay: 4s;">🦋</div>
+    <div class="floating-element" style="top: 70%; right: 5%; animation-delay: 5s;">💝</div>
+
+    <script>
+        function updateVoteCount() {
+            fetch('/api/votes/')
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('voteCount').textContent = data.total_votes;
+                    createHeartExplosion();
+                })
+                .catch(error => console.error('Error:', error));
+        }
+
+        function createHeartExplosion() {
+            for (let i = 0; i < 10; i++) {
+                setTimeout(() => {
+                    const heart = document.createElement('div');
+                    heart.className = 'heart-rain';
+                    heart.innerHTML = ['💖', '💕', '💗', '💝', '💘', '🌹', '✨'][Math.floor(Math.random() * 7)];
+                    heart.style.left = Math.random() * 100 + '%';
+                    heart.style.animationDelay = Math.random() * 1 + 's';
+                    document.body.appendChild(heart);
+
+                    setTimeout(() => {
+                        heart.remove();
+                    }, 4000);
+                }, i * 200);
+            }
+        }
+
+        function createContinuousHearts() {
+            const heart = document.createElement('div');
+            heart.className = 'heart-rain';
+            heart.innerHTML = ['💖', '💕', '💗', '💝', '💘'][Math.floor(Math.random() * 5)];
+            heart.style.left = Math.random() * 100 + '%';
+            heart.style.animationDelay = Math.random() * 2 + 's';
+            document.body.appendChild(heart);
+
+            setTimeout(() => {
+                heart.remove();
+            }, 4000);
+        }
+
+        // Auto-refresh vote count every 30 seconds
+        setInterval(updateVoteCount, 30000);
+
+        // Create continuous heart rain
+        setInterval(createContinuousHearts, 3000);
+
+        // Initial heart explosion on page load
+        setTimeout(createHeartExplosion, 1000);
+    </script>
+</body>
+</html>
